@@ -7,6 +7,7 @@ import TwentyTwo from "../pages/TwentyTwo";
 import TwentyOne from "../pages/TwentyOne";
 import Sculpture from "../pages/Sculpture";
 import Drawing from "../pages/Drawing";
+import Installation from "../pages/Installation";
 
 interface route {
     path: string;
@@ -41,6 +42,10 @@ export const ROUTES: routeWrap = {
     TwentyOne: {
         path: "year/2021",
         Component: TwentyOne,
+    },
+    Installation: {
+        path: "media/Installation",
+        Component: Installation,
     },
     Sculpture: {
         path: "media/sculpture",
