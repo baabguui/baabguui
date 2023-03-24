@@ -16,6 +16,15 @@ function TwentyThree() {
         tilt: { name: "<틸트 창>", datas: "tilt" },
         pillar: { name: "<이어진 기둥>", datas: "pillar" },
         welcome: { name: "<welcome>", datas: "welcome" },
+        graylight: { name: "<회색 등>", datas: "graylight" },
+        shadow: { name: "<그림자>", datas: "shadow" },
+        window: { name: "<창문>", datas: "window" },
+        multitab: { name: "<의자 아래>", datas: "multitab" },
+        corner: { name: "<모서리>", datas: "corner" },
+        pillarDrawing: { name: "<천장방>", datas: "pillarDrawing" },
+        doors: { name: "<문>", datas: "doors" },
+        tables: { name: "<삼각형>", datas: "tables" },
+        welcomeDrawing: { name: "<발판>", datas: "welcomeDrawing" },
     };
 
     const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
@@ -27,8 +36,6 @@ function TwentyThree() {
     };
     const io = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
-            // 관찰 대상이 viewport 안에 들어온 경우 image 로드
-
             if (entry.isIntersecting) {
                 const img = entry.target as HTMLImageElement;
 
@@ -44,7 +51,6 @@ function TwentyThree() {
                     setIsCheck(menu);
                 }
 
-                // 이미지를 불러왔다면 타켓 엘리먼트에 대한 관찰을 멈춘다.
                 observer.unobserve(entry.target);
             }
         });
